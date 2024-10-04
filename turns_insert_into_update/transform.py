@@ -6,17 +6,14 @@ Insira os INSERTs aqui
 """
 
 def convert_insert_to_update(insert_statements):
-    # Extract table name and columns
     table_name = re.search(r"INSERT INTO (\w+)", insert_statements).group(1)
     columns = re.search(r"\((.+?)\)", insert_statements).group(1).split(',')
     columns = [col.strip() for col in columns]
 
-    # Extract values blocks
     insert_blocks = re.findall(r"\((.+?)\)", insert_statements, flags=re.DOTALL)
 
     updates = []
     for block in insert_blocks:
-        # Split values while handling strings with commas properly
         value_list = []
         in_string = False
         value = ""
