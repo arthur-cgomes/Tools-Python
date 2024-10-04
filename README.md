@@ -15,10 +15,6 @@ This script compares two provided lists and generates a file containing the diff
 - Generates detailed messages indicating the differences.
 - Saves the difference messages in a file at the root of the project.
 
-### Requirements
-
-- Python 3.x
-
 ## 2. ✅Format IDs
 
 ### Description
@@ -31,10 +27,6 @@ This script formats a list of IDs, adding single quotes and commas to the elemen
 - Formats the IDs by adding single quotes and commas.
 - Ensures that the last line does not have a comma at the end.
 - Saves the formatted list to a file at the root of the project.
-
-### Requirements
-
-- Python 3.x
 
 ## 3. 🎲Generate Inserts
 
@@ -50,7 +42,6 @@ This script reads a JSON file containing product information, generates SQL INSE
 
 ### Requirements
 
-- Python 3.x
 - JSON file with product data.
 
 ## 4. 🗝️Generate Random Passwords
@@ -153,6 +144,6 @@ UPDATE customers SET name = 'John Doe', age = 30 WHERE id = 1;
 - Run the script.
 - The generated UPDATE statements will be saved in transform-update.sql.
 
-### Requirements
+### Requirements for all scripts
 
 - Python 3.x
